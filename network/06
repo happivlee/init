@@ -1,0 +1,3 @@
+cat /etc/resolv.conf
+
+#the command for just seeing the IP Address of the DNS Server is: scutil --dns

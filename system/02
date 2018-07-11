@@ -1,0 +1,6 @@
+#2. What command can you use to rename your system?
+
+hostname new-hostname
+
+#man hostname - if you just type hostname you'll get the current hostname, if you type hostname vlee, it will change the hostname to vlee (the new hostname)
+#sudo hostname new-hostname-here (in case it needs superuser privileges)

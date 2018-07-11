@@ -1,0 +1,5 @@
+#5. Name the command that determines the state of the SSH service.
+
+/etc/init.d/ssh status
+
+# man /etc/init.d/ssh for lots of options: start, stop, reload, force-reload, restart, try-restart, status

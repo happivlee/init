@@ -1,0 +1,6 @@
+#6. Name the command that reboots the SSH service.
+
+/etc/init.d/ssh restart
+
+#if you check after typing this command in Debian, the run time should have reset.
+#you can also use: sudo service ssh restart

@@ -1,0 +1,6 @@
+#7. Figure out the PID of the SSHD service.
+
+cat /var/run/sshd.pid
+
+#pid = process id - number used by most OS kernels (i.e. UNIX, macOS, Microsoft Windows), to uniquely identify an active process. This number may be used as a parameter in various function calls, allowing processes to be manipulated, such as adjusting the process' priority of killing it altogether.
+#man sshd to learn more about "OpenSSH SSH daemon". provides secure encrypted communications between two untrusted hosts over an insecure network.

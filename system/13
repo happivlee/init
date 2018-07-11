@@ -1,0 +1,6 @@
+#13. Name the command that find, in real time, currently running processes
+
+ps -aux
+
+#man ps (process status) - displays your processes that have controlling terminals, 1 line per process. Data organized as: controlling terminal, then process ID, CPU time (including both user and system time), state, and associated command.
+#-aux: -a == display other users processes as well as your own. -u == display the processes belonging to the specified usernames -x == when displaying processes matched by other options, include processes which do not have a controlling terminal.

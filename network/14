@@ -1,0 +1,5 @@
+# 14. What file contains the local DNS entries?
+
+less /etc/hosts
+
+#/etc/hosts is an OS file that translates hostnames or gomain names to IP addresses. It can be useful for testing website changes of the SSL setup before taking a website publicly live.

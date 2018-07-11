@@ -1,0 +1,9 @@
+#1. Write a script which displays only the login, UID and Path of each entry of the /etc/passwd file.
+
+cat /etc/passwd | awk -F ":" '{print $1, $3, $6}' | column -t
+
+#man awk - pattern-directed scanning and processing language - scans the file for a match
+# $1, $3, $6 - means print the 1st, 3rd, and 6th fields
+#-F fs == defines the input field separator to be the regular expression fs. fs is defined to be ':'
+#man column -- columnate lists - formats its input into multiple columns
+#-t option == determine the number of columns the input contains and create a table. columns are delimited with whitespace, or with the characters supplied using the -s option. Useful for pretty-printing displays.

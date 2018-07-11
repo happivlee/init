@@ -1,0 +1,7 @@
+#10. Name the command that lists the partition tables of drives?
+
+fdisk -l
+
+#you may need to log into the root: su - (then type admin pw when prompted); can also do sudo fdisk -l
+#man fdisk - DOS partition maintenance program
+#-l display partitions and exit

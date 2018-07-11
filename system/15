@@ -1,0 +1,5 @@
+#15. Find the command that kills the background command’s process
+
+kill [PID]
+
+#man kill - terminate or signal a process. to kill a specific process, write the PID after the kill command.

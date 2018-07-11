@@ -1,0 +1,5 @@
+#11. Name the command that displays the available space left and used on the system in an humanly understandable way
+
+df -h
+
+#man df (display free disk space) -h means output in human readable format (i.e. 488M / 5.2G / 24K)

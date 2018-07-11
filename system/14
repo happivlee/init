@@ -1,0 +1,10 @@
+#14. Run the ‘tail -f /var/log/syslog‘ command in background
+
+tail -f /var/log/syslog &
+
+# may need sudo if permission is denied.
+#man sudo - execute a command as another user
+##man su - substitute user identity
+#man tail (diplay the last part of a file)  normally the last 10 lines of file unless otherwise specified
+#-f == causes 'tail' to not stop when end of file is reached, but rather to wait for additional data to be appended to the input
+# & == control operator, telling the shell to execute the command in the background in a subshell.

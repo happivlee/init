@@ -1,0 +1,6 @@
+#With the previous command, forbid all others IP
+
+iptables -P INPUT DROP
+
+#man iptables -P == -policy [chain] [target] - set the policy for the buil-in chain to the given target. The policy target must be either ACCEPT or DROP 
+#effectively forbids any other sources to be added to INPUT.

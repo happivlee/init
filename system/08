@@ -1,0 +1,6 @@
+#8. What file contains the RSA keys of systems that are authorized to connect via SSH?
+
+cat /etc/ssh/sshd_config
+
+#shows where the rsa keys are located
+# can also use "~/.ssh/authorized_keys" - works with the right extensions added.

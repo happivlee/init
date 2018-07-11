@@ -1,0 +1,5 @@
+#12. Check that the server with the 10.51.1.253 IP address is reachable from your computer.
+
+ping -c 3 10.51.1.253
+
+#man ping -c allows you count how many packets you send (instead of until interrupted). ping sends ICMP ECHO_REQUEST packets to network hosts - checks to see if they can receive packets.

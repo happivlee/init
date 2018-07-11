@@ -1,0 +1,9 @@
+#17. Find the command which gives the list of firewall rules
+
+iptables -L
+
+#man iptables - used to set up, maintain, and inspect the tables of IPv4 and IPv6 packet filter rules inthe Linux kernal.
+#Targets: a firewall rule specifies criteria for a packet and a target. ACCEPT means to let the packet through. DROP means to drop the packet on the floor. RETURN means stop traversing this chain and resume at the next rule in the previous calling chain.
+#-L == list all rules in the selected chain. If no chain is selected, all chains are listed.
+#-S == print all rules in the selected chain. If no chain is selected, all chains are printed like iptables-save.
+#source: https://www.digitalocean.com/community/tutorials/how-to-list-and-delete-iptables-firewall-rules

@@ -1,0 +1,8 @@
+#12. Figure out the exact size of each folder of /var in a humanly understandable way followed by the path of it.
+
+df -h /var/*
+
+#df show's size of each folder, how much space is used, and how much is available. (1st column is relevant)
+#sudo du -s /var/* (this should also work, too)
+#man du (display disk usage statistics) -s "display an entry for each specified file"
+#sudo - need superuser /admin permissions to be able to display disk usage.

@@ -1,0 +1,9 @@
+#18. With the previous command, authorize only IP addresses from 10.0.0.0/8 to connect to your system 
+
+iptables -A INPUT -s 10.0.0.0/8 -j ACCEPT
+
+#-A == append == append one ormore rules to the end of the selected chain. format: -A [chain] [rule-specification]
+# -s == source [address] [/mask] [,...] - source specification. Address can be either a network name, a hostname, a network IP address (with /mask) or a plain IP address.
+# -j == jump [target] this specifies the target of the rule, what to do if the packet matches
+# the above command says: append to the INPUT chain the provided IP address , if there is a match, ACCEPT it.
+# -P == -policy [chain] [target] - set the policy for the buil-in chain to the given target. The policy target must be either ACCEPT or DROP
