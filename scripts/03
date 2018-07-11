@@ -1,0 +1,9 @@
+#3. Write a script which displays the list of files from the folder given as parameter, sorted by size.
+
+#!/bin/bash
+ls -lS $1
+
+#man ls - list directory contents
+#-l == long format; file mode, number of links, owner name, group name, number of bytes in the file, abbreiated month, day-of-month file was last modified, hour las tmodified, minute last modified, and the pathname
+#-S == sort files by size
+#"$1/*" - $1 means 1st parameter /* references a directory/folder as asked in the prompt.

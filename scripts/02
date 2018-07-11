@@ -1,0 +1,17 @@
+#2. Write a script which updates all the package sources, then all the packages, and then logs everything in a file named /var/log/update_script.log. Create a scheduled task for this script, once per week at 4 AM.
+
+#!/bin/bash
+apt-get update -y && apt-get upgrade -y >> /var/log/update_script.log >> ~/apt_update.sh
+#below is the command to be placed inside crontab
+0 4 * * 1 root sh ~/apt_update.sh | crontab
+
+#man apt-get (APT package handling utility) - command-line tool for handling packages and may be considered the user's "back-end" to other tools using the APT library.
+#update - used to resynchronize the package index files from their sources. indexes of available packages are fetched from the location(s) specified in /etc/apt/sources.list. Updates should always be performed before an upgrade or dist-upgrade. Retrieves and scans the Packages.gz files, so that info about new and updated packages is available.
+#-y == --asume-yes, automatic yes to prompts the may occur during updates/upgrades.
+#upgrade - used to install the newest versions of all packages currently installed on the system from the sources enumerated in /etc/apt/sources.list. Update should be done first to see which new versions of packages are available, then they're installed with upgrade.
+#/etc/apt/sources.ligt - locations to fetch packages from
+#
+#Lines in the crontab file are written in the following sequence, with the following acceptable values: min (0-59), hour (0-23), day (1-31), month(1-12), weekday(0-6), command. Use an * for it to match any value.
+#typing the 2nd command will schedule the task to run the shell 1x every week at 4am.
+#Could also have done >> /etc/crontab instead of piping it into crontab.
+#crontab -l shows you current crontab. crontab -e allows you to edit crontab to modify scheduled tasks.

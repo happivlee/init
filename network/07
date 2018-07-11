@@ -1,3 +1,5 @@
+#7. Query an external DNS server on the slash16.org domain name (ie. : google 8.8.8.8)
+
 nslookup slash16.org 8.8.8.8
 
 #nslookup queries the DNS to fine the IP address of slash16.org. 8.8.8.8 is Google's free/public DNS Server -  typing it after the website you query allows you to use its server instead of your computers DNS server

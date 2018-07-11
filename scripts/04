@@ -1,0 +1,23 @@
+#4. Write a script which monitors the modifications made to the /etc/crontab file and sends an e-mail to root if the file is modified. Create a scheduled task to run this script everyday at midnight.
+
+#!/bin/bash
+#crontab - to schedule daily checks
+# 0 0 * * * root sh /root/crontab_check.sh | crontab
+
+OLDMD5SUM = 'cat /root/crontabsum'
+NEWMD5SUM = '/etc/crontab | cut -d " " -f 1'
+
+if ["$MD5SUM" != "NEWMD5SUM"]
+then
+	OLDMD5SUM /etc/crontab | cut -d " " -f 1 > /root/crontabsum
+	mail -s "Crontab has been modified" root@localhost.com < /etc/crontab
+fi
+	
+#man md5sum
+# if..fi statement is the fundamental control statement that allows Shell to make decisions and execute statements conditionally (ex. below)
+# if [expression]
+# then
+# Statement(s) to be executd if expression is true
+# fi
+#
+# man mail - send and receive mail; -s == subject of mail; use "" if there are spaces in subject line

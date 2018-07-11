@@ -1,3 +1,5 @@
+#10. Identify the network devices between your computer and the slash16.org domain
+
 traceroute slash16.org
 
 #man traceroute - "trackes the route by sending packets and tracking the 'time to live' "TTL" and attempts to elicit an ICMP TIME_EXCEEDED response from each gateway along the path to some host. Usually has 3 probe packets sent.

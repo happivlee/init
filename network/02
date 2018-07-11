@@ -1,1 +1,3 @@
+#2. Identify and display the Ethernet interface characteristics
+
 ipconfig getifaddr en0
